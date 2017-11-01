@@ -1,0 +1,7 @@
+[package]
+name = "indexed_map"
+version = "0.1.0"
+authors = ["Derek Williams <derek@fyrie.net>"]
+
+[dependencies]
+downcast-rs = "1.0.0"
