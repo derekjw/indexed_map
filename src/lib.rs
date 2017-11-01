@@ -125,7 +125,6 @@ struct IndexState<K, V, A> {
 impl<K, V, A> IndexState<K, V, A>
 where
     K: Eq + Hash + Clone,
-    V: Clone,
     A: Eq + Hash + Clone,
 {
     fn empty<F>(index_fn: F) -> IndexState<K, V, A>
@@ -172,7 +171,7 @@ impl_downcast!(IndexUpdater<K, V>);
 impl<K, V, A> IndexUpdater<K, V> for IndexState<K, V, A>
 where
     K: 'static + Eq + Hash + Clone,
-    V: 'static + Clone,
+    V: 'static,
     A: 'static + Eq + Hash + Clone,
 {
     fn insert(&mut self, key: &K, value: &V) {
